@@ -1,0 +1,93 @@
+Name: OPCUAClient2
+Id: g=7a9c1226453cb4914b97044b47d6962b
+Type: OPCUAClient
+Children:
+- Name: ServerEndpointURL
+  Type: BaseDataVariableType
+  DataType: String
+  Value: "opc.tcp://WINDOWS10-RA-EV:4990/FTLG1"
+- Name: MinimumMessageSecurityMode
+  Type: BaseDataVariableType
+  DataType: MessageSecurityModeEnum
+  Value: 0
+- Name: MinimumSecurityPolicy
+  Type: BaseDataVariableType
+  DataType: SecurityPolicyEnum
+  Value: 0
+- Name: UserIdentityType
+  Type: BaseDataVariableType
+  DataType: UserIdentityTypeEnum
+  Value: 0
+- Name: ConnectionStatus
+  Type: BaseDataVariableType
+  DataType: ConnectionStatusEnum
+  AccessLevel: Read
+  Value: 0
+- Name: ServerUri
+  Type: BaseDataVariableType
+  DataType: String
+  AccessLevel: Read
+  Value: ""
+- Name: Events
+  Type: BaseDataVariableType
+  DataType: EventsEnum
+  Value: 1
+- Name: RuntimeConfigurations
+  Type: BaseObjectType
+- Class: Reference
+  Target: ns=17;i=8
+  Direction: Forward
+- Class: Reference
+  Target: ns=17;i=9
+  Direction: Forward
+- Class: Reference
+  Target: ns=17;i=54
+  Direction: Forward
+- Class: Reference
+  Target: ns=17;i=57
+  Direction: Forward
+- Class: Reference
+  Target: ns=17;i=91
+  Direction: Forward
+- Class: Reference
+  Target: ns=17;i=60
+  Direction: Forward
+- Class: Reference
+  Target: ns=17;i=63
+  Direction: Forward
+- Class: Reference
+  Target: ns=17;i=83
+  Direction: Forward
+- Class: Reference
+  Target: ns=17;i=75
+  Direction: Forward
+- Name: Objects
+  Type: BaseObjectType
+  Children:
+  - Name: ns=4;FactoryTalkLinxGateway
+    Id: ns=4;s=FactoryTalkLinxGateway
+    Type: FolderType
+    DisplayName: {"LocaleId":"en","Text":"FactoryTalkLinxGateway"}
+    Description: {"LocaleId":"en","Text":"FactoryTalkLinxGateway"}
+    Children:
+    - Name: ns=4;Tag_1
+      Id: ns=4;s=Tag_1
+      Type: BaseDataVariableType
+      DataType: Int32
+      DisplayName: {"LocaleId":"en","Text":"Tag_1"}
+      ReferenceType: Organizes
+      Value: 28
+    - Name: ns=4;Tag_2
+      Id: ns=4;s=Tag_2
+      Type: BaseDataVariableType
+      DataType: Int32
+      DisplayName: {"LocaleId":"en","Text":"Tag_2"}
+      ReferenceType: Organizes
+      Value: 1230
+    - Name: ns=4;Tag_3
+      Id: ns=4;s=Tag_3
+      Type: BaseDataVariableType
+      DataType: Float
+      DisplayName: {"LocaleId":"en","Text":"Tag_3"}
+      ReferenceType: Organizes
+      Value: 100.0

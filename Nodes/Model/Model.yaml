@@ -1,0 +1,46 @@
+Name: Model
+Type: ModelCategoryFolder
+Children:
+- Name: MachineStatus
+  Type: BaseObjectType
+  Children:
+  - Name: Stopped
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: false
+  - Name: Started
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: false
+- Name: MachineStatus_B
+  Type: BaseObjectType
+  Children:
+  - Name: Stopped
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: false
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../CommDrivers/RAEtherNet_IPDriver1/RAEtherNet_IPStation1/Tags/Controller Tags/Sts_Stop"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: Started
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: false
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../CommDrivers/RAEtherNet_IPDriver1/RAEtherNet_IPStation1/Tags/Controller Tags/Sts_Start"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+- File: OPC_Client/OPC_Client.yaml

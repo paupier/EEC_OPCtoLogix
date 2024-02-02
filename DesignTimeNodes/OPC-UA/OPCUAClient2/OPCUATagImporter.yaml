@@ -1,0 +1,23 @@
+Name: OPCUATagImporter
+Type: OPCUAImporter
+OwnerId: ns=2;g=7a9c1226453cb4914b97044b47d6962b
+Children:
+- Name: IgnoredPLCItems
+  Type: BaseDataVariableType
+  DataType: BaseDataType
+  ValueRank: OneDimension
+  ArrayDimensions: [0]
+- Name: IgnoredHMIItems
+  Type: BaseDataVariableType
+  DataType: NodeId
+  ValueRank: OneDimension
+  ArrayDimensions: [0]
+  Value: []
+- Name: FilePath
+  Type: BaseDataVariableType
+  DataType: AbsoluteResourceUri
+  Value: ""
+- Name: Mode
+  Type: BaseDataVariableType
+  DataType: FetchProviderModes
+  Value: 1
